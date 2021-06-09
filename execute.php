@@ -71,10 +71,17 @@
 		header("Content-Type: application/json");
 		//i parametri sono cosa voglio mandare indietro al mio utente
 		$parameters = array('chat_id' => $chatId, "text" => $text);
-		
-		
-		
-		
+
+               if($text=="ciao" || $text=="/ciao"){
+      $text = "Benvenuto sulla pagina del bot dell'8 marzo";
+      $parameters = array('chat_id' => $chatId, "text"=> $text);
+    }
+  if($text == "foto"){
+    semdFoto($chatId, "foto.ipg", false, "la mia foto", $api);
+  }
+if($text == 'barz || $text=='/barz'){
+$barze[0] = "che cos'è una zebra? un cavallo evaso dal carcere"; 
+$barze[1] =  "colmo truffatore?
 		//aggiungo il comando di invio
 		//e lo invio
 		
