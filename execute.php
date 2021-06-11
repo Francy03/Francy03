@@ -96,6 +96,14 @@
 			$paramenters = array('chat_id' => $chatId, "text" => $barz[$i]);
 			}
 
+		if($text =="audio"){
+			sendAudio($chatId, "audio.mp3", false, "file audio" $api);
+				}
+
+		if($text =="pdf"){
+			sendDocument( $chatId, "test.pdf", false, "un testo in pdf", $api);
+				 }
+
 		//aggiungo il comando di invio
 		//e lo invio
 		
